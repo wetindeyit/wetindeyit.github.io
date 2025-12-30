@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AI Kickoff Cohort 1.0 | Wetindey InfoTech</title>
+
+<meta name="description" content="AI Kickoff Cohort 1.0 – A 5-Day practical online workshop to learn Generative AI for business, productivity, and career growth.">
+
+<style>
+:root {
+  --bg: #050a14;
+  --card: #0c1628;
+  --primary: #00e0ff;
+  --accent: #ff4d4d;
+  --text: #e6f1ff;
+  --muted: #9fb3c8;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: radial-gradient(circle at top, #0b1c3a, var(--bg));
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* HERO */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  align-items: center;
+  padding: 60px 0;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.hero h1 span {
+  color: var(--primary);
+}
+
+.hero p {
+  color: var(--muted);
+  font-size: 1.1rem;
+  margin: 20px 0;
+}
+
+.hero img {
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 20px 50px rgba(0,0,0,.6);
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--primary), #0077ff);
+  color: #000;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-weight: 700;
+  text-decoration: none;
+  margin-top: 20px;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0,224,255,.4);
+}
+
+/* SECTIONS */
+section {
+  margin: 70px 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+.cards {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.card {
+  background: linear-gradient(180deg, #0c1b35, var(--card));
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.4);
+  transition: transform .2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 18px;
+}
+
+ul li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+}
+
+/* INFO STRIP */
+.info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 20px;
+}
+
+.info div {
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 14px;
+  padding: 20px;
+}
+
+/* FOOTER */
+footer {
+  border-top: 1px solid rgba(255,255,255,.1);
+  padding: 30px 0;
+  color: var(--muted);
+  font-size: .95rem;
+}
+
+/* RESPONSIVE */
+@media (min-width: 900px) {
+  .hero {
+    grid-template-columns: 1.1fr .9fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div>
+      <h1><span>AI Kickoff</span><br>Cohort 1.0</h1>
+      <p>
+        A 5-Day practical online workshop designed to help beginners
+        use Artificial Intelligence confidently for business, career,
+        and personal productivity.
+      </p>
+      <a class="btn" href="PASTE_YOUR_GOOGLE_FORM_LINK_HERE" target="_blank">
+        🚀 Register Now
+      </a>
+    </div>
+    <img src="flyer.jpg" alt="AI Kickoff Cohort Flyer">
+  </div>
+
+  <!-- ABOUT -->
+  <section>
+    <h2 class="section-title">About This Cohort</h2>
+    <p>
+      Cohort 1 focuses on the power of Generative AI to create text,
+      images, and videos, and how to apply these tools to build businesses,
+      increase income, and improve productivity — without coding.
+    </p>
+  </section>
+
+  <!-- LEARN -->
+  <section>
+    <h2 class="section-title">What You Will Learn</h2>
+    <div class="grid cards">
+      <div class="card">
+        <ul>
+          <li>What AI, Machine Learning & Data really mean</li>
+          <li>Text generation with AI</li>
+          <li>Image generation with AI</li>
+          <li>Video generation with AI</li>
+        </ul>
+      </div>
+      <div class="card">
+        <ul>
+          <li>Using AI for business & income</li>
+          <li>AI for productivity & automation</li>
+          <li>Consistent AI characters</li>
+          <li>Real-life practical use cases</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOOLS -->
+  <section>
+    <h2 class="section-title">Tools You Will Use</h2>
+    <div class="grid cards">
+      <div class="card">Smartphone</div>
+      <div class="card">ChatGPT</div>
+      <div class="card">Google Gemini</div>
+      <div class="card">Grok</div>
+    </div>
+    <p style="margin-top:15px;color:var(--muted);">
+      No coding required. No prior experience needed.
+    </p>
+  </section>
+
+  <!-- INFO -->
+  <section>
+    <h2 class="section-title">Cohort Details</h2>
+    <div class="info">
+      <div><strong>Deadline</strong><br>January 3, 2026</div>
+      <div><strong>Venue</strong><br>Online via Zoom<br>(YouTube recordings)</div>
+      <div><strong>Fee</strong><br>₦5,000</div>
+      <div><strong>Bonus</strong><br>WhatsApp support group</div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="text-align:center">
+    <a class="btn" href="PASTE_YOUR_GOOGLE_FORM_LINK_HERE" target="_blank">
+      🎓 Join AI Kickoff Cohort 1.0
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>
+      Wetindey InfoTech •
+      Email: wetindeyit@gmail.com •
+      WhatsApp: +234 904 757 4454
+    </p>
+    <p style="margin-top:10px;">
+      Upcoming: Cohort 2.0 • Cohort 3.0 • Advanced AI Workshops
+    </p>
+  </footer>
+
+</div>
+
+</body>
+</html>
