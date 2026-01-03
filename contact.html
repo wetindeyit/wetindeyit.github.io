@@ -10,12 +10,17 @@
 <header class="nav">
   <div class="nav-container">
     <div class="logo">Wetindey<span>IT</span></div>
-    <nav class="open">
-      <a href="index.html">Home</a>
+
+    <nav id="navMenu">
+      <a href="index.html" class="active">Home</a>
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
-      <a href="contact.html" class="active">Contact</a>
+      <a href="contact.html">Contact</a>
     </nav>
+
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
   </div>
 </header>
 
@@ -35,7 +40,29 @@
       <a href="https://facebook.com/samuel.adelowokanogasamii" target="_blank">Facebook</a>
     </p>
   </div>
+
+<!-- CTA -->
+  <section style="text-align:center">
+    <a class="btn" href="https://forms.gle/NEwEusmRbgNzVUC77" target="_blank">
+      🎓 Join AI Kickoff Cohort 1.0
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>
+      Wetindey InfoTech •
+      Email: wetindeyit@gmail.com •
+      WhatsApp: +234 904 757 4454
+    </p>
+    <!--
+    <p style="margin-top:10px;">
+      Upcoming: Cohort 2.0 • Cohort 3.0 • Advanced AI Workshops 
+    </p>
+    -->
+  </footer>
 </div>
+
   <script>
 function toggleMenu() {
   document.getElementById("navMenu").classList.toggle("open");

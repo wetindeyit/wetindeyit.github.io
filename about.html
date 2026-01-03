@@ -4,6 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About Us | Wetindey InfoTech</title>
+<meta name="description" content="AI Kickoff Cohort 1.0 – A 5-Day practical online workshop to learn Generative AI for business, productivity, and career growth.">
+<!-- Open Graph / Facebook & WhatsApp -->
+<meta property="og:title" content="AI Kick-Off Cohort 1 | Wetindey InfoTech">
+<meta property="og:description" content="5-Day practical online workshop to learn AI, create images, texts, videos, and boost your skills.">
+<meta property="og:image" content="https://wetindeyit.github.io/aikickoff.jpg">
+<meta property="og:url" content="https://wetindeyit.github.io/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI Kick-Off Cohort 1 | Wetindey InfoTech">
+<meta name="twitter:description" content="5-Day practical online workshop to learn AI, create images, texts, videos, and boost your skills.">
+<meta name="twitter:image" content="https://wetindeyit.github.io/aikickoff.jpg">
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -11,12 +22,17 @@
 <header class="nav">
   <div class="nav-container">
     <div class="logo">Wetindey<span>IT</span></div>
-    <nav class="open">
-      <a href="index.html">Home</a>
-      <a href="about.html" class="active">About</a>
+
+    <nav id="navMenu">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
       <a href="services.html">Services</a>
       <a href="contact.html">Contact</a>
     </nav>
+
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
   </div>
 </header>
 
@@ -40,7 +56,29 @@
     He has hands-on experience delivering scalable web and mobile products,
     business automation systems, and AI-powered digital solutions.
   </p>
+
+<!-- CTA -->
+  <section style="text-align:center">
+    <a class="btn" href="https://forms.gle/NEwEusmRbgNzVUC77" target="_blank">
+      🎓 Join AI Kickoff Cohort 1.0
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>
+      Wetindey InfoTech •
+      Email: wetindeyit@gmail.com •
+      WhatsApp: +234 904 757 4454
+    </p>
+    <!--
+    <p style="margin-top:10px;">
+      Upcoming: Cohort 2.0 • Cohort 3.0 • Advanced AI Workshops 
+    </p>
+    -->
+  </footer>
 </div>
+
   <script>
 function toggleMenu() {
   document.getElementById("navMenu").classList.toggle("open");
