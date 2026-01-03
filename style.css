@@ -1,0 +1,248 @@
+body { background:#050a14; color:#e6f1ff; font-family:system-ui; }
+.container { max-width:800px; margin:auto; padding:120px 20px; }
+.card { background:#0c1628; padding:24px; border-radius:14px; }
+a { color:#00e0ff; text-decoration:none; }
+
+:root {
+  --bg: #050a14;
+  --card: #0c1628;
+  --primary: #00e0ff;
+  --accent: #ff4d4d;
+  --text: #e6f1ff;
+  --muted: #9fb3c8;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: radial-gradient(circle at top, #0b1c3a, var(--bg));
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* HERO */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  align-items: center;
+  padding: 60px 0;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.hero h1 span {
+  color: var(--primary);
+}
+
+.hero p {
+  color: var(--muted);
+  font-size: 1.1rem;
+  margin: 20px 0;
+}
+
+.hero img {
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 20px 50px rgba(0,0,0,.6);
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--primary), #0077ff);
+  color: #000;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-weight: 700;
+  text-decoration: none;
+  margin-top: 20px;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0,224,255,.4);
+}
+
+/* SECTIONS */
+section {
+  margin: 70px 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+.cards {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.card {
+  background: linear-gradient(180deg, #0c1b35, var(--card));
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.4);
+  transition: transform .2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 18px;
+}
+
+ul li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+}
+
+/* INFO STRIP */
+.info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 20px;
+}
+
+.info div {
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 14px;
+  padding: 20px;
+}
+
+/* FOOTER */
+footer {
+  border-top: 1px solid rgba(255,255,255,.1);
+  padding: 30px 0;
+  color: var(--muted);
+  font-size: .95rem;
+}
+
+/* RESPONSIVE */
+@media (min-width: 900px) {
+  .hero {
+    grid-template-columns: 1.1fr .9fr;
+  }
+}
+
+  /* NAVIGATION */
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  backdrop-filter: blur(12px);
+  background: rgba(5,10,20,0.75);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.nav-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+.logo span { color: var(--primary); }
+
+nav {
+  display: flex;
+  gap: 28px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 600;
+  position: relative;
+}
+
+nav a.active,
+nav a:hover {
+  color: var(--primary);
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 24px;
+  height: 2px;
+  background: var(--text);
+}
+
+/* MOBILE MENU */
+@media (max-width: 768px) {
+  nav {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background: var(--card);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .35s ease;
+  }
+
+  nav.open {
+    max-height: 260px;
+  }
+
+  nav a {
+    padding: 16px 20px;
+    border-bottom: 1px solid rgba(255,255,255,.06);
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .hero {
+    padding-top: 110px;
+  }
+}
