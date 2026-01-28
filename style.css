@@ -1,5 +1,5 @@
 body { background:#050a14; color:#e6f1ff; font-family:system-ui; }
-.container { max-width:800px; margin:auto; padding:120px 20px; }
+/* .container { max-width:800px; margin:auto; padding:120px 20px; } */
 .card { background:#0c1628; padding:24px; border-radius:14px; }
 a { color:#00e0ff; text-decoration:none; }
 
@@ -24,7 +24,7 @@ body {
 .container {
   max-width: 1100px;
   margin: auto;
-  padding: 130px 20px 60px;
+  padding: 100px 20px 0px;
 }
 
 /* ======================
@@ -54,7 +54,7 @@ body {
   grid-template-columns: 1fr;
   gap: 30px;
   align-items: center;
-  padding: 60px 0;
+  padding: 40px 0;
 }
 
 .hero h1 {
@@ -83,6 +83,57 @@ body {
 @keyframes float {
   0%,100% { transform: translateY(0); }
   50% { transform: translateY(-8px); }
+}
+
+/* ======================
+   COHORT (HERO-LIKE)
+====================== */
+.cohort {
+  padding: 10px 0;
+  margin: 0px
+}
+
+.cohort-inner {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.cohort img {
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 20px 50px rgba(0,0,0,.6);
+  animation: float 6s ease-in-out infinite;
+}
+
+.cohort-text h2 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  margin-bottom: 16px;
+}
+
+.cohort-text p {
+  color: var(--muted);
+  font-size: 1.05rem;
+  max-width: 600px;
+}
+
+/* ======================
+   DESKTOP LAYOUT
+====================== */
+@media (min-width: 900px) {
+  .cohort-inner {
+    grid-template-columns: .9fr 1.1fr;
+  }
+
+  /* Optional: image first, text second */
+  .cohort.reverse .cohort-inner {
+    grid-template-columns: 1.1fr .9fr;
+  }
 }
 
 /* BUTTON */
@@ -251,7 +302,7 @@ nav a:hover {
   }
 
   nav.open {
-    max-height: 260px;
+    max-height: 360px;
   }
 
   nav a {
@@ -264,7 +315,7 @@ nav a:hover {
   }
 
   .hero {
-    padding-top: 110px;
+    padding-top: 5px !important;
   }
 }
 
